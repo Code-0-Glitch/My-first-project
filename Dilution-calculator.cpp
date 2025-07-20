@@ -3,6 +3,7 @@ int main()
 {
     int x;
     double a, b, c, d;
+    std::string conc, volume;
         std::cout<<"***** SAMARTH'S DILUTION CALCULATOR *****\n";
 
     std::cout<<"Tell me what you want from C1*V1=C2*V2? (select from 1-5 , only one operation)\n";
@@ -15,10 +16,15 @@ int main()
                 std::cout<<"\ntell me a number from 1 to 5 : ";
                 std::cin>>x;
                 
+                
                 switch (x){
                     case 1:
 
                     std::cout<<"Okay, now tell me the things that you already know to calculate C1 ....\n";
+                    std::cout<<"tell me the unit of concentration(no numbers please): ";
+                std::getline(std::cin>>std::ws,conc);
+                std::cout<<"tell me the unit of volume(no number please): ";
+                std::getline(std::cin>>std::ws,volume);
                     std::cout<<"V1 : ";
                     std::cin>>b;
                     std::cout << std::endl;
@@ -29,11 +35,15 @@ int main()
                     std::cin>>d;
                     std::cout << std::endl;
                     a = (c*d)/b;
-                    std::cout <<"*** C1 =  "<<a <<" ***";
+                    std::cout <<"*** C1 =  "<<a <<" "<<conc <<" ***";
                     break;
                     case 2:
 
                     std::cout<<"Okay, now tell me the things that you already know to calculate V1 ....\n";
+                    std::cout<<"tell me the unit of concentration(no numbers please): ";
+                std::getline(std::cin>>std::ws,conc);
+                std::cout<<"tell me the unit of volume(no number please): ";
+                std::getline(std::cin>>std::ws,volume);
                     std::cout<<"C1 : ";
                     std::cin>>a;
                     std::cout << std::endl;
@@ -44,11 +54,15 @@ int main()
                     std::cin>>d;
                     std::cout << std::endl;
                     b = (c*d)/a;
-                    std::cout <<"*** V1 =  "<<b <<" ***";
+                    std::cout <<"*** V1 =  "<<b<<" "<<volume <<" ***";
                     break;
                     case 3:
 
                     std::cout<<"Okay, now tell me the things that you already know to calculate C2 ....\n";
+                    std::cout<<"tell me the unit of concentration(no numbers please): ";
+                std::getline(std::cin>>std::ws,conc);
+                std::cout<<"tell me the unit of volume(no number please): ";
+                std::getline(std::cin>>std::ws,volume);
                     std::cout<<"V1 : ";
                     std::cin>>b;
                     std::cout << std::endl;
@@ -59,11 +73,15 @@ int main()
                     std::cin>>d;
                     std::cout << std::endl;
                     c = (a*b)/d;
-                    std::cout <<"*** C2 =  "<<c <<" ***";
+                    std::cout <<"*** C2 =  "<<c<<" "<<conc <<" ***";
                     break;
                     case 4:
 
                     std::cout<<"Okay, now tell me the things that you already know to calculate V2 ....\n";
+                    std::cout<<"tell me the unit of concentration(no numbers please): ";
+                std::getline(std::cin>>std::ws,conc);
+                std::cout<<"tell me the unit of volume(no number please): ";
+                std::getline(std::cin>>std::ws,volume);
                     std::cout<<"V1 : ";
                     std::cin>>b;
                     std::cout << std::endl;
@@ -74,7 +92,7 @@ int main()
                     std::cin>>a;
                     std::cout << std::endl;
                     d = (a*b)/c;
-                    std::cout <<"*** C1 =  "<<d <<" ***";
+                    std::cout <<"*** C1 =  "<<d<<" "<<volume <<" ***";
                     break;
                     default:
                     std::cout<<"HOPE I DONT SEE YOU AGAIN, you dumb piece of shit !";
